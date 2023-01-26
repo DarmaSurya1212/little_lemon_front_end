@@ -10,12 +10,17 @@ import Reservation from './Components/Reservation';
 import OrderOnline from './Components/OrderOnline';
 import Login from './Components/Login';
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
+import Footer from './Components/Footer';
+import image from './Components/Images/placeholder-images.jpg'
 function App() {
   return (
     <BrowserRouter>
-      <div className ='App'>
+      <meta name="og:title" content="Little Lemon Restaurant"/>
+      <meta name="description" content="Little Lemon Restaurant selling foods and you can reserve table and order online"/>
+      <meta name="og:image" content={image}/>
+      <div style={{backgroundColor : "#222831"}}>
         <>
-          <Navbar bg="dark" expand="lg" variant='dark'>
+          <Navbar expand="lg" variant='dark'>
             <Container>
               <Navbar.Brand as={Link} to ='/'>
                 <img src= {placeholderImages} alt='logo' height = '30' width= '30' className='d-inline-block align-top'/>
@@ -46,6 +51,8 @@ function App() {
 
           </Routes>
         </div>
+      <Footer />
+
       </div>
     </BrowserRouter>
   );

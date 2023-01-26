@@ -1,8 +1,21 @@
 import React from 'react'
+import Introduction from './Introduction'
+import Testimonial from './Testimonial'
+import WeeklySpecial from './WeeklySpecial'
+import HomeAbout from './homeAbout'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    {/* Little Lemon and Book Table Introduction */}
+    <Introduction />
+    {/* Weekly Special */}
+    <WeeklySpecial />
+    {/* Testimonial*/}
+    <Testimonial />
+    {/* About */}
+    <HomeAbout />
+    </>
   )
 }
 
